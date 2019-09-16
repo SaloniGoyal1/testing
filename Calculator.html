@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+.table{
+background: gray;
+border: 5px solid black;
+border-radius: 10px;
+}
+.but:hover{
+background: green;
+color: white;
+}
+.but{
+height: 60px;
+width: 60px;
+background: black;
+color: white;
+border-radius: 10px;
+}
+.text{
+margin: 4px;
+height: 45px;
+width: 240px;
+font-size: 35px;
+}
+</style>
+</head>
+<body>
+<form name="calc">
+<center>
+<h1> Calculator </h1>
+<table class="table">
+<tr>
+<td colspan="4"><input type="text" placeholder="0" class="text" name="insert"></td>
+</tr>
+<tr>
+<th><input type="button" value="1" class="but" name="1" onclick="calc.insert.value+='1'"></th>
+<th><input type="button" value="2" class="but" name="2" onclick="calc.insert.value+='2'"></th>
+<th><input type="button" value="3" class="but" name="3" onclick="calc.insert.value+='3'"></th>
+<th><input type="button" value="+" class="but" name="+" onclick="calc.insert.value+='+'"></th>
+</tr>
+<tr>
+<th><input type="button" value="4" class="but" name="4" onclick="calc.insert.value+='4'"></th>
+<th><input type="button" value="5" class="but" name="5" onclick="calc.insert.value+='5'"></th>
+<th><input type="button" value="6" class="but" name="6" onclick="calc.insert.value+='6'"></th>
+<th><input type="button" value="-" class="but" name="-" onclick="calc.insert.value+='-'"></th>
+</tr>
+<tr>
+<th><input type="button" value="7" class="but" name="7" onclick="calc.insert.value+='7'"></th>
+<th><input type="button" value="8" class="but" name="8" onclick="calc.insert.value+='8'"></th>
+<th><input type="button" value="9" class="but" name="9" onclick="calc.insert.value+='9'"></th>
+<th><input type="button" value="*" class="but" name="*" onclick="calc.insert.value+='*'"></th>
+</tr>
+<tr>
+<th><input type="reset" value="C" class="but" name="reset" onclick="calc.insert.value+='0'"></th>
+<th><input type="button" value="0" class="but" name="0" onclick="calc.insert.value+='0'"></th>
+<th><input type="button" value="=" class="but" name="=" onclick="calc.insert.value=eval(calc.insert.value)"></th>
+<th><input type="button" value="/" class="but" name="/" onclick="calc.insert.value+='/'"></th>
+</tr>
+<tr>
+<th><input type="button" value="Square" class="but" name="square" onclick="calc.insert.value=eval(calc.insert.value)*(calc.insert.value)"></th>
+<th><input type="button" value="GST" class="but" name="GST" onclick="calc.insert.value=eval(calc.insert.value)+(calc.insert.value*.18)"></th>
+<th><input type="button" value="%" class="but" name="%" onclick="calc.insert.value=eval(calc.insert.value*0.01)"></th>
+<th><input type="button" value="." class="but" name="." onclick="calc.insert.value+='.'"></th>
+</tr>
+</table>
+</center>
+</form>
+</body>
+</html>
